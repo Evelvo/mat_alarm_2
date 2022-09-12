@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type=text/javascript>
+            $(function() {
+            $('a#middag').bind('click', function() {
+                $.getJSON('/middag',
+                    function(data) {
+                });
+            return false;
+        });
+        });
+    </script>
+    <script type=text/javascript>
+            $(function() {
+            $('a#legg_knapp').bind('click', function() {
+                $.getJSON('/legg_knapp',
+                    function(data) {
+                });
+            return false;
+        });
+        });
+    </script>
+    <script type=text/javascript>
+            $(function() {
+            $('a#Møte_knapp').bind('click', function() {
+                $.getJSON('/Møte_knapp',
+                    function(data) {
+                });
+            return false;
+        });
+        });
+    </script>
+    <script type=text/javascript>
+            $(function() {
+            $('a#skjerm_knapp').bind('click', function() {
+                $.getJSON('/skjerm_knapp',
+                    function(data) {
+                });
+            return false;
+        });
+        });
+    </script>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <title>Middag alarm</title>
+        <link rel = "shortcut icon" href = "{{ url_for('static', filename = 'icon.ico') }}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    </head>
+    <body>
+        <div class ="container">
+            <p id = "text_swipe">Swipe for more...</p>
+            <div class="slider">
+
+                <a href="#middag">1</a>
+                <a href="#legg_knapp">2</a>
+                <a href="#Møte_knapp">3</a>
+                <a href="#skjerm_knapp">4</a>
+                
+                
+                <div class="slides">
+                    <div class='container'>
+                        <form>
+                            <a href=# id=middag><button class='btn btn-default' id = "middag-button">Mat</button></a>
+                        </form>
+                    </div>
+                    <div class='container'>
+                        <form>
+                            <a href=# id=legg_knapp><button class='btn btn-default' id = "sove-button">
+                                Legg deg om 10 min
+                            </button></a>
+                        </form>
+                    </div>
+                    <div class='container'>
+                        <form>
+                            <a href=# id=Møte_knapp><button class='btn btn-default' id = "møte-button">
+                                Møte
+                            </button></a>
+                        </form>
+                    </div>
+                    <div class='container'>
+                        <form>
+                            <a href=# id=skjerm_knapp><button class='btn btn-default' id = "skjerm-button">
+                                Skjermpause
+                            </button></a>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+            <form action="/Sendt" method = "POST">
+                <p><input type = "text" name = "Melding" id = "Melding_input" value = "" placeholder="Melding"/></p>
+                <p><input type = "submit" value = "Send" id = "SendBTN"/></p>
+            </form>
+        </div>
+    </body>
+</html>

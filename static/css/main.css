@@ -1,0 +1,298 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #575757;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: url("../bg.svg");
+    background-repeat: no-repeat;
+    background-position: fixed;
+}
+
+
+#text_swipe {
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #757575;
+  margin-bottom: -22px;
+}
+
+@media screen and (min-width: 600px) {
+  #text_swipe {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    display: none;
+  }
+}
+
+
+#SendBTN {
+  width: 200px;
+  height: 35px;
+  margin-top: 10px;
+  border-radius: 50px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #263238;
+  border: none;
+  box-shadow: -5px 5px 14px #263238;
+  background-color: white;
+}
+
+
+#Melding_input {
+  margin-top: 75px;
+  width: 260px;
+  height: 40px;
+  border-radius: 50px;
+  font-size: 1em;
+  font-weight: bold;
+  color: gray;
+  border: none;
+  box-shadow: -5px 5px 14px #263238;
+  text-align: center;
+}
+
+
+#middag-button {
+  margin-top: 30px;
+  border-radius: 50px;
+  width: 260px;
+  height: 260px;
+  box-shadow: -5px 5px 14px #263238;
+  border: none;
+  background-color: #e0e0e0;
+  transition: all 0.1s linear 0.05s;
+  font-weight: bold;
+  font-size: 2.5em;
+  color: #263238;
+}
+
+@media (hover: hover){
+    
+  #middag-button:hover{
+    color: #37474f;
+    background-color: white;
+    transform: translate(0, -5px);
+    box-shadow: -2px 2px 2px black;
+  }
+  
+}
+
+#middag-button:active{
+  color: #37474f;
+  background-color: white;
+  transform: scale(1.05) perspective(1px)
+}
+
+
+
+
+
+
+
+
+#sove-button {
+  margin-top: 30px;
+  border-radius: 50px;
+  width: 260px;
+  height: 260px;
+  box-shadow: -5px 5px 14px #263238;
+  border: none;
+  background-color: #e0e0e0;
+  transition: all 0.1s linear 0.05s;
+  font-weight: bold;
+  font-size: 2.5em;
+  color: #263238;
+}
+
+@media (hover: hover){
+    
+  #sove-button:hover{
+    color: #37474f;
+    background-color: white;
+    transform: translate(0, -5px);
+    box-shadow: -2px 2px 2px black;
+  }
+  
+}
+
+#sove-button:active{
+  color: #37474f;
+  background-color: white;
+  transform: scale(1.05) perspective(1px)
+}
+
+
+
+#møte-button {
+  margin-top: 30px;
+  border-radius: 50px;
+  width: 260px;
+  height: 260px;
+  box-shadow: -5px 5px 14px #263238;
+  border: none;
+  background-color: #e0e0e0;
+  transition: all 0.1s linear 0.05s;
+  font-weight: bold;
+  font-size: 2.5em;
+  color: #263238;
+}
+
+@media (hover: hover){
+    
+  #møte-button:hover{
+    color: #37474f;
+    background-color: white;
+    transform: translate(0, -5px);
+    box-shadow: -2px 2px 2px black;
+  }
+  
+}
+
+#møte-button:active{
+  color: #37474f;
+  background-color: white;
+  transform: scale(1.05) perspective(1px)
+}
+
+
+
+
+
+#skjerm-button {
+  margin-top: 30px;
+  border-radius: 50px;
+  width: 260px;
+  height: 260px;
+  box-shadow: -5px 5px 14px #263238;
+  border: none;
+  background-color: #e0e0e0;
+  transition: all 0.1s linear 0.05s;
+  font-weight: bold;
+  font-size: 2.5em;
+  color: #263238;
+}
+
+@media (hover: hover){
+    
+  #skjerm-button:hover{
+    color: #37474f;
+    background-color: white;
+    transform: translate(0, -5px);
+    box-shadow: -2px 2px 2px black;
+  }
+  
+}
+
+#skjerm-button:active{
+  color: #37474f;
+  background-color: white;
+  transform: scale(1.05) perspective(1px)
+}
+
+
+
+
+
+
+  * {
+    box-sizing: border-box;
+}
+
+.slider {
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.slides {
+    display: flex;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+
+
+    -webkit-scroll-snap-points-x: repeat(300px);
+      -ms-scroll-snap-points-x: repeat(300px);
+          scroll-snap-points-x: repeat(300px);
+  -webkit-scroll-snap-type: mandatory;
+      -ms-scroll-snap-type: mandatory;
+          scroll-snap-type: mandatory;
+}
+
+.slides::-webkit-scrollbar {
+    visibility: hidden;
+    clear: both;
+    display: none;
+}
+
+.slides > div {
+    width: 300px;
+    height: 300px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    margin-right: 10px;
+    border-radius: 10px;
+    transform: scale(1);
+    transition: transform 0.5s;
+
+
+}
+
+.container {
+  text-align: center;
+}
+
+.slider > a {
+    color: black;
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20%;
+    background-color: #bdbdbd;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+}
+.slider > a:active {
+    top: 1px;
+}
+.slider > a:focus {
+    background: #424242;
+    color: white;
+}
+
+@supports (scroll-snap-type) {
+.slider > a {
+    display: none;
+}
+}
+
+@media screen and (max-width: 600px) {
+    .slider > a {
+      visibility: hidden;
+      clear: both;
+      float: left;
+      display: none;
+    }
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
